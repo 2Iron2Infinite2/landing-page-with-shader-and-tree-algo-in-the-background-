@@ -208,8 +208,9 @@ function startBigType(){
 }
 
 /* ===================== THREE.JS APP ===================== */
-import * as THREE from "three";
-import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
+import * as THREE from "https://unpkg.com/three@0.159.0/build/three.module.js";
+import { RoomEnvironment } from "https://unpkg.com/three@0.159.0/examples/jsm/environments/RoomEnvironment.js";
+
 
 /* page background grid */
 document.body.style.margin = "0";

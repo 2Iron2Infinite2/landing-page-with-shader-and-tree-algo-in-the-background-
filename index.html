@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wobbly Trees • Mosaic Intro + Shader GUI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <!-- lil-gui (GUI) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+</head>
+<body>
+  <!-- INTRO LOADER (covers scene, then removes itself) -->
+  <div id="intro" class="intro">
+    <div class="intro__stage intro__ticker" aria-hidden="true">
+      <div class="ticker__row">
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+      </div>
+      <div class="ticker__row ticker__row--alt">
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span>CONNECT&nbsp;THE&nbsp;DOTS&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+      </div>
+    </div>
+    <div class="intro__stage intro__mosaic" aria-hidden="true"></div>
+  </div>
+
+  <div id="click-hints" class="click-hints" aria-hidden="true"></div>
+
+  <div class="overlay">
+    <div class="stamp">
+      <div class="row big">EASY ACE <span class="bold">R444</span></div>
+      <div class="row tight">
+        <span class="pill">RDS</span>
+        <span class="sp">2-7-**@. TRANSP.</span>
+        <span class="code">C03C4/0028</span>
+      </div>
+      <div class="row mono">DOT2X-A5X-M12X</div>
+      <div class="row">
+        <span class="roman">IIII</span>
+        <span class="badge">HANDCRAFTED</span>
+      </div>
+      <div class="row small mono">REMEMBER, IT IS ALL ABOUT CONNECTING THE DOTS</div>
+
+      <!-- Big animated headline lives INSIDE the stamp -->
+      <div id="bigtype" class="bigtype bigtype--in-stamp" aria-live="polite"></div>
+    </div>
+
+    <div class="hud">
+      <span>agents:</span>
+      <strong id="hud-agents">0</strong>
+      <span class="muted">/</span>
+      <span id="hud-cap">500</span>
+    </div>
+  </div>
+
+  <!-- GUI container (lil-gui injects its own, we just ensure z-index stacking) -->
+  <div id="shader-gui-root"></div>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/lil-gui@0.18/+esm"></script>
+  <script type="module" src="./src/script.js"></script>
+</body>
+</html>

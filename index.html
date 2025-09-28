@@ -5,15 +5,15 @@
   <title>Wobbly Trees • Mosaic Intro + Shader GUI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./src/style.css" />
-  <!-- (optional) speed up first CDN handshake -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-  <!-- Import map so bare imports like `import ... from "three"` work in the browser -->
+  <!-- Import map so bare imports like `import ... from "three"` resolve -->
   <script type="importmap">
   {
     "imports": {
       "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+      "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/",
+      "three/examples/jsm/": "https://unpkg.com/three@0.159.0/examples/jsm/"
     }
   }
   </script>
